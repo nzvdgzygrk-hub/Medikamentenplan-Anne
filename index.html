@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Medikamentenplan</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .patient-box {
+      background: #eef3ff;
+      padding: 15px;
+      border-left: 5px solid #4a7afe;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 2px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 14px 12px;
+      font-size: 1rem;
+    }
+
+    th {
+      background: #e2e8ff;
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      font-size: 1.1rem;
+    }
+
+    td.center {
+      text-align: center;
+    }
+
+    .desc {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    .weekly {
+      background: #fff3bf;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Medikamentenplan</h1>
+
+  <div class="patient-box">
+    <strong>Fatma Kaplan</strong><br>
+    Geboren: 02.01.1950<br>
+    Adresse: Königsbergerstr. 10, 42549 Velbert
+  </div>
+
+  <table>
+    <tr>
+      <th>Medikament</th>
+      <th>Morgens</th>
+      <th>Mittags</th>
+      <th>Abends</th>
+    </tr>
+
+    <tr>
+      <td>
+        Micardis Plus 40/12,5
+        <div class="desc">→ Blutdrucksenker / Entwässerung</div>
+      </td>
+      <td class="center">1</td>
+      <td class="center">–</td>
+      <td class="center">–</td>
+    </tr>
+
+    <tr>
+      <td>
+        Allopurinol 100
+        <div class="desc">→ Gegen Gicht / senkt Harnsäure</div>
+      </td>
+      <td class="center">1</td>
+      <td class="center">–</td>
+      <td class="center">–</td>
+    </tr>
+
+    <tr>
+      <td>
+        Pantoprazol 20
+        <div class="desc">→ Magenschutz</div>
+      </td>
+      <td class="center">1</td>
+      <td class="center">–</td>
+      <td class="center">–</td>
+    </tr>
+
+    <tr>
+      <td>
+        ASS Protect 100
+        <div class="desc">→ Blutverdünner</div>
+      </td>
+      <td class="center">–</td>
+      <td class="center">–</td>
+      <td class="center">1</td>
+    </tr>
+
+    <tr>
+      <td>
+        Novalgin Tropfen 500
+        <div class="desc">→ Schmerzmittel / Fiebersenkend</div>
+      </td>
+      <td class="center">30 Tr.</td>
+      <td class="center">30 Tr.</td>
+      <td class="center">30 Tr.</td>
+    </tr>
+
+    <tr class="weekly">
+      <td>
+        Dekristol
+        <div class="desc">→ Vitamin D3</div>
+      </td>
+      <td colspan="3">1× wöchentlich (Freitag)</td>
+    </tr>
+
+  </table>
+</div>
+
+</body>
+</html>
