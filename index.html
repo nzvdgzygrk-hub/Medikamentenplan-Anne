@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Medikamentenplan</title>
+  <title>Aktueller Medikamentenplan – Fatma Kaplan</title>
+
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
@@ -13,55 +14,71 @@
     }
 
     .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 900px;
+      background: #ffffff;
       width: 100%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 1100px;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
     }
 
     h1 {
       text-align: center;
       margin-bottom: 10px;
+      font-size: 2rem;
+      color: #222;
     }
 
     .patient-box {
       background: #eef3ff;
-      padding: 15px;
-      border-left: 5px solid #4a7afe;
+      border-left: 6px solid #4a7afe;
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .doctor-box {
+      background: #f9f9f9;
+      border-left: 5px solid #999;
+      padding: 14px;
       border-radius: 8px;
       margin-bottom: 25px;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      color: #444;
       line-height: 1.6;
     }
 
     table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      border: 2px solid #333;
-      border-radius: 10px;
+      border-collapse: collapse;
       overflow: hidden;
-      background: #ffffff;
-    }
-
-    th, td {
-      border: 1px solid #555;
-      padding: 14px 12px;
-      font-size: 1rem;
+      border-radius: 12px;
     }
 
     th {
-      background: #e2e8ff;
-      font-weight: bold;
-      text-align: center;
-      border-bottom: 2px solid #333;
-      font-size: 1.1rem;
+      background: #4a7afe;
+      color: white;
+      padding: 14px;
+      border: 2px solid #dbe4ff;
+      font-size: 1rem;
+    }
+
+    td {
+      padding: 14px 10px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+      background: #fff;
     }
 
     td.center {
       text-align: center;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) td {
+      background: #f8faff;
     }
 
     .desc {
@@ -69,93 +86,185 @@
       font-size: 0.85rem;
       color: #555;
       font-style: italic;
+      line-height: 1.4;
+    }
+
+    .bedarf {
+      color: #c0392b;
+      font-weight: bold;
     }
 
     .weekly {
-      background: #fff3bf;
+      background: #fff4c7 !important;
       font-weight: bold;
-      text-align: center;
     }
   </style>
 </head>
+
 <body>
 
 <div class="container">
+
   <h1>Medikamentenplan</h1>
 
   <div class="patient-box">
     <strong>Fatma Kaplan</strong><br>
-    Geboren: 02.01.1950<br>
+    Geburtsdatum: 02.01.1950<br>
     Adresse: Königsbergerstr. 10, 42549 Velbert
   </div>
 
+  <div class="doctor-box">
+    Ausgedruckt von:<br>
+    <strong>Dr. med. Sabahattin Yaman</strong><br>
+    Oststraße 80, 42551 Velbert<br>
+    Tel: 02051-254604<br>
+    E-Mail: dr.s.yaman@t-online.de<br><br>
+
+    Ausgedruckt am: 08.05.2026 – 11:29 Uhr
+  </div>
+
   <table>
+
     <tr>
       <th>Medikament</th>
       <th>Morgens</th>
       <th>Mittags</th>
       <th>Abends</th>
+      <th>Hinweis</th>
     </tr>
 
     <tr>
       <td>
-        Micardis Plus 40/12,5
-        <div class="desc">→ Blutdrucksenker / Entwässerung</div>
+        Micardis Plus 80/12,5 mg
+        <div class="desc">
+          → Blutdrucksenker / Entwässerung
+        </div>
       </td>
       <td class="center">1</td>
-      <td class="center">–</td>
-      <td class="center">–</td>
+      <td class="center">0</td>
+      <td class="center">0</td>
+      <td>Tablette</td>
     </tr>
 
     <tr>
       <td>
-        Allopurinol 100
-        <div class="desc">→ Gegen Gicht / senkt Harnsäure</div>
+        Pantoprazol Actavis 20 mg
+        <div class="desc">
+          → Magenschutz
+        </div>
       </td>
       <td class="center">1</td>
-      <td class="center">–</td>
-      <td class="center">–</td>
-    </tr>
-
-    <tr>
-      <td>
-        Pantoprazol 20
-        <div class="desc">→ Magenschutz</div>
-      </td>
+      <td class="center">0</td>
       <td class="center">1</td>
-      <td class="center">–</td>
-      <td class="center">–</td>
-    </tr>
-
-    <tr>
-      <td>
-        ASS Protect 100
-        <div class="desc">→ Blutverdünner</div>
-      </td>
-      <td class="center">–</td>
-      <td class="center">–</td>
-      <td class="center">1</td>
-    </tr>
-
-    <tr>
-      <td>
-        Novalgin Tropfen 500
-        <div class="desc">→ Schmerzmittel / Fiebersenkend – <strong>bei Bedarf</strong></div>
-      </td>
-      <td class="center">30 Tr.</td>
-      <td class="center">30 Tr.</td>
-      <td class="center">30 Tr.</td>
+      <td>Besser 1-0-1 (leerem Magen)</td>
     </tr>
 
     <tr class="weekly">
       <td>
-        Dekristol 20.000
-        <div class="desc">→ Vitamin D3 – <strong>bei Bedarf</strong></div>
+        Dekristolvit D3 5600 I.E.
+        <div class="desc">
+          → Vitamin D3
+        </div>
       </td>
-      <td colspan="3">1× wöchentlich (Freitag)</td>
+      <td colspan="3" class="center">
+        1× pro Woche
+      </td>
+      <td>Wöchentlich</td>
+    </tr>
+
+    <tr>
+      <td>
+        BisoHEXAL® 5 mg
+        <div class="desc">
+          → Blutdruck / Herzfrequenz
+        </div>
+      </td>
+      <td class="center">1</td>
+      <td class="center">0</td>
+      <td class="center">1/2</td>
+      <td>ggfs. weiter reduzieren</td>
+    </tr>
+
+    <tr>
+      <td>
+        Atorvastatin Micro Labs 20 mg
+        <div class="desc">
+          → Cholesterinsenker
+        </div>
+      </td>
+      <td class="center">0</td>
+      <td class="center">0</td>
+      <td class="center">1</td>
+      <td>Abends</td>
+    </tr>
+
+    <tr>
+      <td>
+        Allopurinol Indoco 100 mg
+        <div class="desc">
+          → Gegen Gicht / senkt Harnsäure
+        </div>
+      </td>
+      <td class="center">1</td>
+      <td class="center">0</td>
+      <td class="center">0</td>
+      <td>Tablette</td>
+    </tr>
+
+    <tr>
+      <td>
+        Eliquis 5 mg
+        <div class="desc">
+          → Blutverdünner
+        </div>
+      </td>
+      <td class="center">1</td>
+      <td class="center">0</td>
+      <td class="center">1</td>
+      <td>Filmtablette</td>
+    </tr>
+
+    <tr>
+      <td>
+        Relvar Ellipta 92µg/22µg
+        <div class="desc">
+          → Inhalationspulver / Atemwege
+        </div>
+      </td>
+      <td class="center">1</td>
+      <td class="center">0</td>
+      <td class="center">0</td>
+      <td>1 Hub täglich</td>
+    </tr>
+
+    <tr>
+      <td>
+        SalbuHEXAL® N Dosieraerosol 200
+        <div class="desc">
+          → Asthmaspray / Atemnot
+        </div>
+      </td>
+      <td colspan="3" class="center bedarf">
+        Bei Bedarf – 2× täglich
+      </td>
+      <td>Spray</td>
+    </tr>
+
+    <tr>
+      <td>
+        Novaminsulfon 500 mg Tropfen
+        <div class="desc">
+          → Schmerzmittel / fiebersenkend
+        </div>
+      </td>
+      <td colspan="3" class="center bedarf">
+        Bei Bedarf
+      </td>
+      <td>Tropfen</td>
     </tr>
 
   </table>
+
 </div>
 
 </body>
