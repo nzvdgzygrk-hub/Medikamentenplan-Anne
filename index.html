@@ -2,101 +2,120 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Aktueller Medikamentenplan – Fatma Kaplan</title>
+  <title>Medikamentenplan – Fatma Kaplan</title>
 
   <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f4f6f9;
-      padding: 40px;
-      display: flex;
-      justify-content: center;
+    body{
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:#f4f6f9;
+      padding:40px;
+      display:flex;
+      justify-content:center;
     }
 
-    .container {
-      background: #ffffff;
-      width: 100%;
-      max-width: 1100px;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    .container{
+      background:#fff;
+      width:100%;
+      max-width:1100px;
+      padding:30px;
+      border-radius:14px;
+      box-shadow:0 4px 25px rgba(0,0,0,0.1);
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 2rem;
-      color: #222;
+    h1{
+      text-align:center;
+      margin-bottom:10px;
+      color:#222;
     }
 
-    .patient-box {
-      background: #eef3ff;
-      border-left: 6px solid #4a7afe;
-      padding: 18px;
-      border-radius: 10px;
-      margin-bottom: 25px;
-      line-height: 1.7;
-      font-size: 1rem;
+    .patient-box{
+      background:#eef3ff;
+      border-left:6px solid #4a7afe;
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:25px;
+      line-height:1.7;
     }
 
-    .doctor-box {
-      background: #f9f9f9;
-      border-left: 5px solid #999;
-      padding: 14px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-      font-size: 0.95rem;
-      color: #444;
-      line-height: 1.6;
+    .doctor-box{
+      background:#f8f8f8;
+      border-left:5px solid #999;
+      padding:15px;
+      border-radius:8px;
+      margin-bottom:25px;
+      color:#444;
+      line-height:1.6;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      overflow: hidden;
-      border-radius: 12px;
+    h2{
+      margin-top:35px;
+      margin-bottom:15px;
+      color:#333;
+      border-bottom:2px solid #4a7afe;
+      padding-bottom:6px;
     }
 
-    th {
-      background: #4a7afe;
-      color: white;
-      padding: 14px;
-      border: 2px solid #dbe4ff;
-      font-size: 1rem;
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:10px;
     }
 
-    td {
-      padding: 14px 10px;
-      border: 1px solid #ccc;
-      vertical-align: top;
-      background: #fff;
+    th{
+      background:#4a7afe;
+      color:white;
+      padding:14px;
+      border:1px solid #d8e1ff;
     }
 
-    td.center {
-      text-align: center;
-      font-weight: bold;
+    td{
+      padding:14px 10px;
+      border:1px solid #ccc;
+      vertical-align:top;
     }
 
-    tr:nth-child(even) td {
-      background: #f8faff;
+    tr:nth-child(even){
+      background:#f8faff;
     }
 
-    .desc {
-      margin-top: 6px;
-      font-size: 0.85rem;
-      color: #555;
-      font-style: italic;
-      line-height: 1.4;
+    td.center{
+      text-align:center;
+      font-weight:bold;
     }
 
-    .bedarf {
-      color: #c0392b;
-      font-weight: bold;
+    .desc{
+      margin-top:5px;
+      font-size:0.85rem;
+      color:#555;
+      font-style:italic;
+      line-height:1.4;
     }
 
-    .weekly {
-      background: #fff4c7 !important;
-      font-weight: bold;
+    .card{
+      background:#fff;
+      border-left:6px solid #4a7afe;
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:16px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .card-title{
+      font-weight:bold;
+      font-size:1.05rem;
+      margin-bottom:6px;
+    }
+
+    .usage{
+      margin-top:8px;
+      background:#f5f7ff;
+      padding:10px;
+      border-radius:6px;
+    }
+
+    .bedarf{
+      color:#c0392b;
+      font-weight:bold;
     }
   </style>
 </head>
@@ -123,6 +142,8 @@
     Ausgedruckt am: 08.05.2026 – 11:29 Uhr
   </div>
 
+  <h2>Tabletten</h2>
+
   <table>
 
     <tr>
@@ -135,11 +156,12 @@
 
     <tr>
       <td>
-        Micardis Plus 80/12,5 mg
+        Micardis Plus 40/12,5 mg
         <div class="desc">
           → Blutdrucksenker / Entwässerung
         </div>
       </td>
+
       <td class="center">1</td>
       <td class="center">0</td>
       <td class="center">0</td>
@@ -153,23 +175,11 @@
           → Magenschutz
         </div>
       </td>
+
       <td class="center">1</td>
       <td class="center">0</td>
       <td class="center">1</td>
       <td>Besser 1-0-1 (leerem Magen)</td>
-    </tr>
-
-    <tr class="weekly">
-      <td>
-        Dekristolvit D3 5600 I.E.
-        <div class="desc">
-          → Vitamin D3
-        </div>
-      </td>
-      <td colspan="3" class="center">
-        1× pro Woche
-      </td>
-      <td>Wöchentlich</td>
     </tr>
 
     <tr>
@@ -179,6 +189,7 @@
           → Blutdruck / Herzfrequenz
         </div>
       </td>
+
       <td class="center">1</td>
       <td class="center">0</td>
       <td class="center">1/2</td>
@@ -192,6 +203,7 @@
           → Cholesterinsenker
         </div>
       </td>
+
       <td class="center">0</td>
       <td class="center">0</td>
       <td class="center">1</td>
@@ -205,6 +217,7 @@
           → Gegen Gicht / senkt Harnsäure
         </div>
       </td>
+
       <td class="center">1</td>
       <td class="center">0</td>
       <td class="center">0</td>
@@ -218,6 +231,7 @@
           → Blutverdünner
         </div>
       </td>
+
       <td class="center">1</td>
       <td class="center">0</td>
       <td class="center">1</td>
@@ -226,44 +240,65 @@
 
     <tr>
       <td>
-        Relvar Ellipta 92µg/22µg
+        Dekristolvit D3 5600 I.E.
         <div class="desc">
-          → Inhalationspulver / Atemwege
+          → Vitamin D3
         </div>
       </td>
-      <td class="center">1</td>
-      <td class="center">0</td>
-      <td class="center">0</td>
-      <td>1 Hub täglich</td>
-    </tr>
 
-    <tr>
-      <td>
-        SalbuHEXAL® N Dosieraerosol 200
-        <div class="desc">
-          → Asthmaspray / Atemnot
-        </div>
-      </td>
-      <td colspan="3" class="center bedarf">
-        Bei Bedarf – 2× täglich
-      </td>
-      <td>Spray</td>
-    </tr>
-
-    <tr>
-      <td>
-        Novaminsulfon 500 mg Tropfen
-        <div class="desc">
-          → Schmerzmittel / fiebersenkend
-        </div>
-      </td>
-      <td colspan="3" class="center bedarf">
-        Bei Bedarf
-      </td>
-      <td>Tropfen</td>
+      <td class="center">1x</td>
+      <td class="center">pro</td>
+      <td class="center">Woche</td>
+      <td>Wöchentlich</td>
     </tr>
 
   </table>
+
+  <h2>Sprays / Inhalation / Tropfen</h2>
+
+  <div class="card">
+    <div class="card-title">
+      Relvar Ellipta 92µg/22µg
+    </div>
+
+    <div class="desc">
+      → Inhalationspulver / Atemwege
+    </div>
+
+    <div class="usage">
+      Anwendung: <strong>1 Hub täglich</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      SalbuHEXAL® N Dosieraerosol 200
+    </div>
+
+    <div class="desc">
+      → Asthmaspray / Atemnot
+    </div>
+
+    <div class="usage">
+      Anwendung:
+      <span class="bedarf">Bei Bedarf – 2× täglich</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      Novaminsulfon 500 mg Tropfen
+    </div>
+
+    <div class="desc">
+      → Schmerzmittel / fiebersenkend
+    </div>
+
+    <div class="usage">
+      Anwendung:
+      <span class="bedarf">Bei Bedarf</span>
+    </div>
+  </div>
 
 </div>
 
