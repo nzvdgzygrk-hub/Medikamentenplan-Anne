@@ -2,15 +2,15 @@
   "name": "Medikamentenplan",
   "short_name": "MedPlan",
   "description": "Medikamentenplan mit Einnahmezeiten",
-  "start_url": "./aktuell2.html?v=pille1",
+  "start_url": "./?v=pille3",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4169e1",
   "icons": [
     {
-      "src": "medikament-icon.svg?v=pille1",
-      "sizes": "512x512",
-      "type": "image/svg+xml",
+      "src": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/master/color/618x618/1F48A.png",
+      "sizes": "618x618",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
