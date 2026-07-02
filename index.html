@@ -4,40 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#4169e1">
-<link rel="icon" type="image/svg+xml" href="medikament-icon.svg?v=20260703-de-tr">
-<link rel="apple-touch-icon" href="medikament-icon.svg?v=20260703-de-tr">
-<link rel="manifest" href="site.webmanifest?v=20260703-de-tr">
+<link rel="icon" type="image/svg+xml" href="medikament-icon.svg?v=20260703-switch">
+<link rel="apple-touch-icon" href="medikament-icon.svg?v=20260703-switch">
+<link rel="manifest" href="site.webmanifest?v=20260703-switch">
 <title>Medikamentenplan</title>
 <style>
-*{box-sizing:border-box}body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0;padding:28px;color:#222}.container{background:#fff;width:100%;max-width:1000px;margin:auto;padding:24px;border-radius:14px;box-shadow:0 4px 25px rgba(0,0,0,.1)}h1{text-align:center;margin:0 0 4px}.subtitle{text-align:center;color:#4169e1;font-weight:bold;margin-bottom:18px}.box{border-left:5px solid #4169e1;background:#eef3ff;padding:12px 14px;border-radius:9px;margin-bottom:14px;line-height:1.45}h2{font-size:20px;margin:18px 0 8px;border-bottom:2px solid #4169e1;padding-bottom:4px}table{width:100%;border-collapse:collapse;table-layout:fixed}th{background:#4169e1;color:white;text-align:left}th,td{border:1px solid #ccc;padding:9px 7px;vertical-align:top}tr:nth-child(even){background:#f8faff}.center{text-align:center;font-weight:bold;white-space:nowrap}.card{border-left:5px solid #4169e1;padding:12px;border-radius:8px;margin:8px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}.usage{background:#f5f7ff;padding:7px;border-radius:5px;margin-top:5px}.bedarf{color:#b83227;font-weight:bold}.footer{font-size:12px;color:#555;text-align:center;margin-top:16px;border-top:1px solid #ddd;padding-top:8px}.tr{margin-top:30px;border-top:3px solid #4169e1;padding-top:14px}.note{background:#fff8e6;border-left:5px solid #f0b429;padding:10px;border-radius:8px;margin-bottom:10px}
-@media(max-width:700px){body{background:#fff;padding:4px;font-size:10.2px;line-height:1.08}.container{padding:5px;border-radius:0;box-shadow:none}h1{font-size:17px}.subtitle{font-size:12px;margin-bottom:4px}.box{padding:5px 7px;margin-bottom:5px;line-height:1.16}h2{font-size:12.5px;margin:6px 0 3px;padding-bottom:2px}th,td{padding:3px 2px;font-size:9.8px;line-height:1.05;overflow-wrap:anywhere}th:nth-child(1),td:nth-child(1){width:43%}th:nth-child(2),td:nth-child(2){width:20%}th:nth-child(3),td:nth-child(3){width:37%}.card{box-shadow:none;padding:4px 6px;margin:3px 0}.usage{padding:3px 4px}.footer{font-size:8.5px}.tr{margin-top:18px;padding-top:10px}.note{font-size:10px;padding:6px}}
+*{box-sizing:border-box}body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0;padding:24px;color:#222}.container{background:#fff;max-width:1000px;margin:auto;padding:22px;border-radius:14px;box-shadow:0 4px 25px rgba(0,0,0,.1)}h1{text-align:center;margin:0 0 4px}.subtitle{text-align:center;color:#4169e1;font-weight:bold;margin-bottom:12px}.switch{display:flex;gap:8px;margin:10px 0 16px}.switch button{flex:1;border:1px solid #4169e1;background:#eef3ff;color:#222;border-radius:9px;padding:10px;font-weight:bold}.switch button.active{background:#4169e1;color:#fff}.box{border-left:5px solid #4169e1;background:#eef3ff;padding:12px 14px;border-radius:9px;margin-bottom:14px;line-height:1.45}h2{font-size:20px;margin:18px 0 8px;border-bottom:2px solid #4169e1;padding-bottom:4px}table{width:100%;border-collapse:collapse;table-layout:fixed}th{background:#4169e1;color:white;text-align:left}th,td{border:1px solid #ccc;padding:9px 7px;vertical-align:top}tr:nth-child(even){background:#f8faff}.center{text-align:center;font-weight:bold;white-space:nowrap}.card{border-left:5px solid #4169e1;padding:12px;border-radius:8px;margin:8px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}.usage{background:#f5f7ff;padding:7px;border-radius:5px;margin-top:5px}.bedarf{color:#b83227;font-weight:bold}.footer{font-size:12px;color:#555;text-align:center;margin-top:16px;border-top:1px solid #ddd;padding-top:8px}.hidden{display:none}
+@media(max-width:700px){body{background:#fff;padding:4px;font-size:10.3px;line-height:1.08}.container{padding:5px;border-radius:0;box-shadow:none}h1{font-size:17px}.subtitle{font-size:12px;margin-bottom:4px}.switch{gap:5px;margin:6px 0}.switch button{padding:7px;font-size:11px}.box{padding:5px 7px;margin-bottom:5px;line-height:1.16}h2{font-size:12.5px;margin:6px 0 3px;padding-bottom:2px}th,td{padding:3px 2px;font-size:9.8px;line-height:1.05;overflow-wrap:anywhere}th:nth-child(1),td:nth-child(1){width:43%}th:nth-child(2),td:nth-child(2){width:20%}th:nth-child(3),td:nth-child(3){width:37%}.card{box-shadow:none;padding:4px 6px;margin:3px 0}.usage{padding:3px 4px}.footer{font-size:8.5px}}
 </style>
 </head>
 <body>
 <div class="container">
-<h1>Medikamentenplan</h1>
-<div class="subtitle">Gültig ab 03.07.2026</div>
-<div class="box"><strong>Fatma Kaplan</strong><br>Stand: ab 03.07.2026<br>Arzt: <strong>Dr. med. Sabahattin Yaman</strong></div>
-<h2>Tabletten</h2>
-<table>
-<tr><th>Medikament</th><th>Einnahme</th><th>Wofür grob</th></tr>
-<tr><td>Micardis 40/12,5 mg</td><td class="center">1-0-0</td><td>Blutdruck / Wasser</td></tr>
-<tr><td>Pantoprazol 20 mg</td><td class="center">1-0-0</td><td>Magen</td></tr>
-<tr><td>Jardiance 10 mg</td><td class="center">1-0-0</td><td>Herz entlasten</td></tr>
-<tr><td>Allopurinol 100 mg</td><td class="center">1-0-0</td><td>Gicht / Harnsäure</td></tr>
-<tr><td>Isoptin (Verapamil) 40 mg</td><td class="center">1-0-1</td><td>Herz / Blutdruck</td></tr>
-<tr><td>Eliquis 5 mg</td><td class="center">1-0-1</td><td>Gerinnung</td></tr>
-<tr><td>Atorvastatin 20 mg</td><td class="center">0-0-1</td><td>Cholesterin</td></tr>
-<tr><td>Dekristolvit D3</td><td class="center">1× wöchentlich</td><td>Vitamin D</td></tr>
-</table>
-<h2>Sprays / Inhalation / Tropfen</h2>
-<div class="card"><strong>Relvar Ellipta 92µg/22µg</strong><div class="usage">Atemwege / Inhalation: <strong>1 Hub täglich</strong></div></div>
-<div class="card"><strong>SalbuHEXAL® N Dosieraerosol 200</strong><div class="usage">Atemnot / Asthma: <span class="bedarf">bei Bedarf – 2× täglich</span></div></div>
-<div class="card"><strong>Novaminsulfon 500 mg Tropfen</strong><div class="usage">Schmerzen / Fieber: <span class="bedarf">bei Bedarf</span></div></div>
-<div class="footer">„Wofür“ ist nur grob. Änderungen bitte mit Arzt oder Apotheke abgleichen.</div>
-<div class="tr">
-<h2>Türkçe açıklama</h2>
-<div class="note">Bu bölüm, fotoğraftaki listenin Türkçe karşılığıdır.</div>
+<div class="switch"><button id="btnTr" class="active" onclick="showPlan('tr')">Türkçe</button><button id="btnDe" onclick="showPlan('de')">Deutsch</button></div>
+<section id="planTr">
+<h1>İlaç Planı</h1>
+<div class="subtitle">03.07.2026 tarihinden itibaren geçerli</div>
+<div class="box"><strong>Fatma Kaplan</strong><br>Durum: 03.07.2026 itibaren<br>Doktor: <strong>Dr. med. Sabahattin Yaman</strong></div>
+<h2>Haplar</h2>
 <table>
 <tr><th>İlaç</th><th>Kullanım</th><th>Ne için</th></tr>
 <tr><td>Micardis 40/12,5 mg</td><td class="center">1-0-0</td><td>Tansiyon / su</td></tr>
@@ -45,11 +28,41 @@
 <tr><td>Pantoprazol 20 mg</td><td class="center">1-0-0</td><td>Mide</td></tr>
 <tr><td>Isoptin (Verapamil) 40 mg</td><td class="center">1-0-1</td><td>Kalp / tansiyon</td></tr>
 <tr><td>Jardiance 10 mg</td><td class="center">1-0-0</td><td>Kalbi rahatlatır</td></tr>
-<tr><td>Eliquis 5 mg</td><td class="center">1-0-1</td><td>Kalp ilacı</td></tr>
+<tr><td>Eliquis 5 mg</td><td class="center">1-0-1</td><td>Kan sulandırıcı</td></tr>
 <tr><td>Atorvastatin 20 mg</td><td class="center">0-0-1</td><td>Kolesterol</td></tr>
 <tr><td>Dekristolvit D3</td><td class="center">1× haftalık</td><td>D vitamini</td></tr>
 </table>
+<h2>Sprey / İnhalasyon / Damla</h2>
+<div class="card"><strong>Relvar Ellipta 92µg/22µg</strong><div class="usage">Solunum yolları / inhalasyon: <strong>günde 1 fıs</strong></div></div>
+<div class="card"><strong>SalbuHEXAL® N Dosieraerosol 200</strong><div class="usage">Nefes darlığı / astım: <span class="bedarf">ihtiyaç halinde – günde 2×</span></div></div>
+<div class="card"><strong>Novaminsulfon 500 mg damla</strong><div class="usage">Ağrı / ateş: <span class="bedarf">ihtiyaç halinde</span></div></div>
+<div class="footer">“Ne için” bölümü sadece kaba bilgi içindir. Değişiklikleri doktor veya eczane ile kontrol edin.</div>
+</section>
+<section id="planDe" class="hidden">
+<h1>Medikamentenplan</h1>
+<div class="subtitle">Gültig ab 03.07.2026</div>
+<div class="box"><strong>Fatma Kaplan</strong><br>Stand: ab 03.07.2026<br>Arzt: <strong>Dr. med. Sabahattin Yaman</strong></div>
+<h2>Tabletten</h2>
+<table>
+<tr><th>Medikament</th><th>Einnahme</th><th>Hinweis</th></tr>
+<tr><td>Micardis 40/12,5 mg</td><td class="center">1-0-0</td><td>morgens</td></tr>
+<tr><td>Pantoprazol 20 mg</td><td class="center">1-0-0</td><td>morgens</td></tr>
+<tr><td>Jardiance 10 mg</td><td class="center">1-0-0</td><td>morgens</td></tr>
+<tr><td>Allopurinol 100 mg</td><td class="center">1-0-0</td><td>morgens</td></tr>
+<tr><td>Isoptin (Verapamil) 40 mg</td><td class="center">1-0-1</td><td>morgens + abends</td></tr>
+<tr><td>Eliquis 5 mg</td><td class="center">1-0-1</td><td>morgens + abends</td></tr>
+<tr><td>Atorvastatin 20 mg</td><td class="center">0-0-1</td><td>abends</td></tr>
+<tr><td>Dekristolvit D3</td><td class="center">1× wöchentlich</td><td>1× pro Woche</td></tr>
+</table>
+<h2>Sprays / Inhalation / Tropfen</h2>
+<div class="card"><strong>Relvar Ellipta 92µg/22µg</strong><div class="usage">Anwendung: <strong>1 Hub täglich</strong></div></div>
+<div class="card"><strong>SalbuHEXAL® N Dosieraerosol 200</strong><div class="usage">Anwendung: <span class="bedarf">Bei Bedarf – 2× täglich</span></div></div>
+<div class="card"><strong>Novaminsulfon 500 mg Tropfen</strong><div class="usage">Anwendung: <span class="bedarf">Bei Bedarf</span></div></div>
+<div class="footer">Änderungen bitte mit Arzt oder Apotheke abgleichen.</div>
+</section>
 </div>
-</div>
+<script>
+function showPlan(lang){document.getElementById('planTr').classList.toggle('hidden',lang!=='tr');document.getElementById('planDe').classList.toggle('hidden',lang!=='de');document.getElementById('btnTr').classList.toggle('active',lang==='tr');document.getElementById('btnDe').classList.toggle('active',lang==='de');}
+</script>
 </body>
 </html>
