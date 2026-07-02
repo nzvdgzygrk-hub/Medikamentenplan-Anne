@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="tr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#4169e1" />
-  <link rel="icon" type="image/svg+xml" href="medikament-icon.svg?v=20260703-icon4" />
-  <link rel="apple-touch-icon" href="medikament-icon.svg?v=20260703-icon4" />
-  <link rel="manifest" href="site.webmanifest?v=20260703-icon4" />
-  <title>Medikamentenplan</title>
+  <link rel="icon" type="image/svg+xml" href="medikament-icon.svg?v=20260703-tr" />
+  <link rel="apple-touch-icon" href="medikament-icon.svg?v=20260703-tr" />
+  <link rel="manifest" href="site.webmanifest?v=20260703-tr" />
+  <title>İlaç Planı</title>
   <style>
     *{box-sizing:border-box}
     body{font-family:Arial,sans-serif;background:#f4f6f9;margin:0;padding:28px;color:#222;display:flex;justify-content:center}
@@ -17,31 +17,31 @@
     .doctor{margin-top:4px;color:#333}
     h2{font-size:20px;margin:18px 0 8px;border-bottom:2px solid #4169e1;padding-bottom:4px}
     table{width:100%;border-collapse:collapse;table-layout:fixed}th{background:#4169e1;color:#fff;text-align:left}th,td{border:1px solid #ccc;padding:10px 8px;vertical-align:top}tr:nth-child(even){background:#f8faff}.center{text-align:center;font-weight:bold;white-space:nowrap}.card{border-left:5px solid #4169e1;background:#fff;padding:12px;border-radius:8px;margin:8px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}.usage{background:#f5f7ff;padding:7px;border-radius:5px;margin-top:5px}.bedarf{color:#b83227;font-weight:bold}.footer{font-size:12px;color:#555;text-align:center;margin-top:16px;border-top:1px solid #ddd;padding-top:8px}
-    @media(max-width:700px){body{display:block;background:#fff;padding:4px;font-size:10.2px;line-height:1.08}.container{max-width:none;padding:5px;border-radius:0;box-shadow:none}h1{font-size:17px;margin:0}.subtitle{font-size:12px;margin-bottom:4px}.box{padding:5px 7px;margin-bottom:5px;border-left-width:4px;line-height:1.16}.doctor{margin-top:2px}h2{font-size:12.5px;margin:6px 0 3px;padding-bottom:2px;border-bottom-width:1px}th,td{padding:3px 2px;font-size:9.8px;line-height:1.05;overflow-wrap:anywhere}th:nth-child(1),td:nth-child(1){width:43%}th:nth-child(2),td:nth-child(2){width:20%}th:nth-child(3),td:nth-child(3){width:37%}.card{box-shadow:none;border-left-width:4px;padding:4px 6px;margin:3px 0}.usage{padding:3px 4px;margin-top:2px}.footer{font-size:8.5px;line-height:1.1;margin-top:4px;padding-top:3px}}
+    @media(max-width:700px){body{display:block;background:#fff;padding:4px;font-size:10.2px;line-height:1.08}.container{max-width:none;padding:5px;border-radius:0;box-shadow:none}h1{font-size:17px;margin:0}.subtitle{font-size:12px;margin-bottom:4px}.box{padding:5px 7px;margin-bottom:5px;border-left-width:4px;line-height:1.16}.doctor{margin-top:2px}h2{font-size:12.5px;margin:6px 0 3px;padding-bottom:2px;border-bottom-width:1px}th,td{padding:3px 2px;font-size:9.8px;line-height:1.05;overflow-wrap:anywhere}th:nth-child(1),td:nth-child(1){width:43%}th:nth-child(2),td:nth-child(2){width:20%}th:nth-child(3),td:nth-child(3){width:37%}.card{box-shadow:none;border-left-width:4px;padding:6px 7px;margin:5px 0}.usage{padding:5px 6px;margin-top:3px}.footer{font-size:8.5px;line-height:1.1;margin-top:6px;padding-top:4px}}
   </style>
 </head>
 <body>
 <div class="container">
-  <h1>Medikamentenplan</h1>
-  <div class="subtitle">Gültig ab 03.07.2026</div>
-  <div class="box"><strong>Fatma Kaplan</strong><br>Stand: ab 03.07.2026<div class="doctor">Arzt: <strong>Dr. med. Sabahattin Yaman</strong></div></div>
-  <h2>Tabletten</h2>
+  <h1>İlaç Planı</h1>
+  <div class="subtitle">03.07.2026 tarihinden itibaren geçerli</div>
+  <div class="box"><strong>Fatma Kaplan</strong><br>Durum: 03.07.2026 itibaren<div class="doctor">Doktor: <strong>Dr. med. Sabahattin Yaman</strong></div></div>
+  <h2>Haplar</h2>
   <table>
-    <tr><th>Medikament</th><th>Einnahme</th><th>Wofür grob</th></tr>
-    <tr><td>Micardis 40/12,5 mg</td><td class="center">1-0-0</td><td>Blutdruck senken, Wasser ausscheiden</td></tr>
-    <tr><td>Pantoprazol 20 mg</td><td class="center">1-0-0</td><td>Magenschutz, Magensäure senken</td></tr>
-    <tr><td>Jardiance 10 mg</td><td class="center">1-0-0</td><td>Herz entlasten</td></tr>
-    <tr><td>Allopurinol 100 mg</td><td class="center">1-0-0</td><td>Harnsäure senken, gegen Gicht</td></tr>
-    <tr><td>Isoptin (Verapamil) 40 mg</td><td class="center">1-0-1</td><td>Herzrhythmus und Blutdruck</td></tr>
-    <tr><td>Eliquis 5 mg</td><td class="center">1-0-1</td><td>Blutgerinnung hemmen</td></tr>
-    <tr><td>Atorvastatin 20 mg</td><td class="center">0-0-1</td><td>Cholesterin senken</td></tr>
-    <tr><td>Dekristolvit D3</td><td class="center">1× wöchentlich</td><td>Vitamin-D-Versorgung</td></tr>
+    <tr><th>İlaç</th><th>Kullanım</th><th>Ne için</th></tr>
+    <tr><td>Micardis 40/12,5 mg</td><td class="center">1-0-0</td><td>Tansiyon / su atımı</td></tr>
+    <tr><td>Pantoprazol 20 mg</td><td class="center">1-0-0</td><td>Mide koruyucu</td></tr>
+    <tr><td>Jardiance 10 mg</td><td class="center">1-0-0</td><td>Kalbi rahatlatır</td></tr>
+    <tr><td>Allopurinol 100 mg</td><td class="center">1-0-0</td><td>Gut / ürik asit</td></tr>
+    <tr><td>Isoptin (Verapamil) 40 mg</td><td class="center">1-0-1</td><td>Kalp / tansiyon</td></tr>
+    <tr><td>Eliquis 5 mg</td><td class="center">1-0-1</td><td>Pıhtı önleme</td></tr>
+    <tr><td>Atorvastatin 20 mg</td><td class="center">0-0-1</td><td>Kolesterol</td></tr>
+    <tr><td>Dekristolvit D3</td><td class="center">1× haftalık</td><td>D vitamini</td></tr>
   </table>
-  <h2>Sprays / Inhalation / Tropfen</h2>
-  <div class="card"><strong>Relvar Ellipta 92µg/22µg</strong><div class="usage">Atemwege / Langzeit-Inhalation: <strong>1 Hub täglich</strong></div></div>
-  <div class="card"><strong>SalbuHEXAL® N Dosieraerosol 200</strong><div class="usage">Akute Atemnot / Asthma: <span class="bedarf">bei Bedarf – 2× täglich</span></div></div>
-  <div class="card"><strong>Novaminsulfon 500 mg Tropfen</strong><div class="usage">Schmerzen / Fieber: <span class="bedarf">bei Bedarf</span></div></div>
-  <div class="footer">„Wofür“ ist nur grob. Änderungen bitte mit Arzt oder Apotheke abgleichen.</div>
+  <h2>Sprey / İnhalasyon / Damla</h2>
+  <div class="card"><strong>Relvar Ellipta 92µg/22µg</strong><div class="usage">Solunum yolları / düzenli inhalasyon: <strong>günde 1 fıs</strong></div></div>
+  <div class="card"><strong>SalbuHEXAL® N Dosieraerosol 200</strong><div class="usage">Nefes darlığı / astım: <span class="bedarf">ihtiyaç halinde – günde 2×</span></div></div>
+  <div class="card"><strong>Novaminsulfon 500 mg damla</strong><div class="usage">Ağrı / ateş: <span class="bedarf">ihtiyaç halinde</span></div></div>
+  <div class="footer">“Ne için” bölümü sadece kaba bilgi içindir. Değişiklikleri doktor veya eczane ile kontrol edin.</div>
 </div>
 </body>
 </html>
