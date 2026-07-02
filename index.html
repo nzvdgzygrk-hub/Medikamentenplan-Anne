@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Medikamentenplan – Fatma Kaplan</title>
 
   <style>
@@ -11,6 +12,7 @@
       padding:40px;
       display:flex;
       justify-content:center;
+      color:#222;
     }
 
     .container{
@@ -26,6 +28,14 @@
       text-align:center;
       margin-bottom:10px;
       color:#222;
+    }
+
+    .subtitle{
+      text-align:center;
+      margin-bottom:25px;
+      font-size:1.1rem;
+      font-weight:bold;
+      color:#4a7afe;
     }
 
     .patient-box{
@@ -47,6 +57,15 @@
       line-height:1.6;
     }
 
+    .info-box{
+      background:#fff8e6;
+      border-left:6px solid #f0b429;
+      padding:14px 16px;
+      border-radius:8px;
+      margin-bottom:25px;
+      line-height:1.5;
+    }
+
     h2{
       margin-top:35px;
       margin-bottom:15px;
@@ -66,6 +85,7 @@
       color:white;
       padding:14px;
       border:1px solid #d8e1ff;
+      text-align:left;
     }
 
     td{
@@ -78,9 +98,10 @@
       background:#f8faff;
     }
 
-    td.center{
+    .center{
       text-align:center;
       font-weight:bold;
+      white-space:nowrap;
     }
 
     .desc{
@@ -117,6 +138,61 @@
       color:#c0392b;
       font-weight:bold;
     }
+
+    .footer{
+      margin-top:30px;
+      padding-top:15px;
+      border-top:1px solid #ddd;
+      font-size:0.85rem;
+      color:#555;
+      text-align:center;
+    }
+
+    @media (max-width:700px){
+      body{
+        padding:12px;
+      }
+
+      .container{
+        padding:18px;
+      }
+
+      table, thead, tbody, th, td, tr{
+        display:block;
+      }
+
+      tr{
+        margin-bottom:14px;
+        border:1px solid #ccc;
+        border-radius:8px;
+        overflow:hidden;
+      }
+
+      th{
+        display:none;
+      }
+
+      td{
+        border:none;
+        border-bottom:1px solid #eee;
+      }
+
+      td:last-child{
+        border-bottom:none;
+      }
+
+      td::before{
+        content:attr(data-label);
+        display:block;
+        font-weight:bold;
+        color:#4a7afe;
+        margin-bottom:4px;
+      }
+
+      .center{
+        text-align:left;
+      }
+    }
   </style>
 </head>
 
@@ -125,6 +201,7 @@
 <div class="container">
 
   <h1>Medikamentenplan</h1>
+  <div class="subtitle">Gültig ab 03.07.2026</div>
 
   <div class="patient-box">
     <strong>Fatma Kaplan</strong><br>
@@ -139,119 +216,94 @@
     Tel: 02051-254604<br>
     E-Mail: dr.s.yaman@t-online.de<br><br>
 
-    Ausgedruckt am: 08.05.2026 – 11:29 Uhr
+    Stand des Plans: ab 03.07.2026
+  </div>
+
+  <div class="info-box">
+    Einnahmeschema: <strong>morgens - mittags - abends</strong><br>
+    Beispiel: <strong>1-0-0</strong> = morgens 1, mittags 0, abends 0.
   </div>
 
   <h2>Tabletten</h2>
 
   <table>
-
     <tr>
       <th>Medikament</th>
-      <th>Morgens</th>
-      <th>Mittags</th>
-      <th>Abends</th>
+      <th>Einnahme</th>
       <th>Hinweis</th>
     </tr>
 
     <tr>
-      <td>
-        Micardis Plus 40/12,5 mg
-        <div class="desc">
-          → Blutdrucksenker / Entwässerung
-        </div>
+      <td data-label="Medikament">
+        Micardis 40/12,5 mg
+        <div class="desc">→ Blutdruck / Entwässerung</div>
       </td>
-
-      <td class="center">1</td>
-      <td class="center">0</td>
-      <td class="center">0</td>
-      <td>Tablette</td>
+      <td data-label="Einnahme" class="center">1-0-0</td>
+      <td data-label="Hinweis">morgens</td>
     </tr>
 
     <tr>
-      <td>
-        Pantoprazol Actavis 20 mg
-        <div class="desc">
-          → Magenschutz
-        </div>
+      <td data-label="Medikament">
+        Pantoprazol 20 mg
+        <div class="desc">→ Magen</div>
       </td>
-
-      <td class="center">1</td>
-      <td class="center">0</td>
-      <td class="center">1</td>
-      <td>Besser 1-0-1 (leerem Magen)</td>
+      <td data-label="Einnahme" class="center">1-0-0</td>
+      <td data-label="Hinweis">morgens</td>
     </tr>
 
     <tr>
-      <td>
-        BisoHEXAL® 5 mg
-        <div class="desc">
-          → Blutdruck / Herzfrequenz
-        </div>
+      <td data-label="Medikament">
+        Jardiance 10 mg
+        <div class="desc">→ Herz / Zucker / Nierenentlastung</div>
       </td>
-
-      <td class="center">1</td>
-      <td class="center">0</td>
-      <td class="center">1/2</td>
-      <td>ggfs. weiter reduzieren</td>
+      <td data-label="Einnahme" class="center">1-0-0</td>
+      <td data-label="Hinweis">morgens</td>
     </tr>
 
     <tr>
-      <td>
-        Atorvastatin Micro Labs 20 mg
-        <div class="desc">
-          → Cholesterinsenker
-        </div>
+      <td data-label="Medikament">
+        Allopurinol 100 mg
+        <div class="desc">→ Gegen Gicht / senkt Harnsäure</div>
       </td>
-
-      <td class="center">0</td>
-      <td class="center">0</td>
-      <td class="center">1</td>
-      <td>Abends</td>
+      <td data-label="Einnahme" class="center">1-0-0</td>
+      <td data-label="Hinweis">morgens</td>
     </tr>
 
     <tr>
-      <td>
-        Allopurinol Indoco 100 mg
-        <div class="desc">
-          → Gegen Gicht / senkt Harnsäure
-        </div>
+      <td data-label="Medikament">
+        Isoptin (Verapamil) 40 mg
+        <div class="desc">→ Herz / Blutdruck</div>
       </td>
-
-      <td class="center">1</td>
-      <td class="center">0</td>
-      <td class="center">0</td>
-      <td>Tablette</td>
+      <td data-label="Einnahme" class="center">1-0-1</td>
+      <td data-label="Hinweis">morgens und abends</td>
     </tr>
 
     <tr>
-      <td>
+      <td data-label="Medikament">
         Eliquis 5 mg
-        <div class="desc">
-          → Blutverdünner
-        </div>
+        <div class="desc">→ Blutverdünner</div>
       </td>
-
-      <td class="center">1</td>
-      <td class="center">0</td>
-      <td class="center">1</td>
-      <td>Filmtablette</td>
+      <td data-label="Einnahme" class="center">1-0-1</td>
+      <td data-label="Hinweis">morgens und abends</td>
     </tr>
 
     <tr>
-      <td>
-        Dekristolvit D3 5600 I.E.
-        <div class="desc">
-          → Vitamin D3
-        </div>
+      <td data-label="Medikament">
+        Atorvastatin 20 mg
+        <div class="desc">→ Cholesterinsenker</div>
       </td>
-
-      <td class="center">1x</td>
-      <td class="center">pro</td>
-      <td class="center">Woche</td>
-      <td>Wöchentlich</td>
+      <td data-label="Einnahme" class="center">0-0-1</td>
+      <td data-label="Hinweis">abends</td>
     </tr>
 
+    <tr>
+      <td data-label="Medikament">
+        Dekristol
+        <div class="desc">→ Vitamin D3</div>
+      </td>
+      <td data-label="Einnahme" class="center">1× wöchentlich</td>
+      <td data-label="Hinweis">einmal pro Woche</td>
+    </tr>
   </table>
 
   <h2>Sprays / Inhalation / Tropfen</h2>
@@ -298,6 +350,10 @@
       Anwendung:
       <span class="bedarf">Bei Bedarf</span>
     </div>
+  </div>
+
+  <div class="footer">
+    Bitte Änderungen an Herz-, Blutdruck- oder Blutverdünner-Medikamenten immer mit Arzt oder Apotheke abgleichen.
   </div>
 
 </div>
