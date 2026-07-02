@@ -6,6 +6,10 @@
   <title>Medikamentenplan – Fatma Kaplan</title>
 
   <style>
+    *{
+      box-sizing:border-box;
+    }
+
     body{
       font-family:"Segoe UI",Arial,sans-serif;
       background:#f4f6f9;
@@ -13,6 +17,7 @@
       display:flex;
       justify-content:center;
       color:#222;
+      margin:0;
     }
 
     .container{
@@ -26,7 +31,7 @@
 
     h1{
       text-align:center;
-      margin-bottom:10px;
+      margin:0 0 10px 0;
       color:#222;
     }
 
@@ -148,49 +153,141 @@
       text-align:center;
     }
 
+    /* iPhone / kompakte Ansicht: alles soll auf eine Handyseite passen */
     @media (max-width:700px){
+      html, body{
+        width:100%;
+        min-height:100%;
+        background:#fff;
+      }
+
       body{
-        padding:12px;
+        display:block;
+        padding:4px;
+        font-size:11px;
+        line-height:1.18;
       }
 
       .container{
-        padding:18px;
+        width:100%;
+        max-width:none;
+        padding:6px;
+        border-radius:0;
+        box-shadow:none;
       }
 
-      table, thead, tbody, th, td, tr{
-        display:block;
+      h1{
+        font-size:18px;
+        margin:0 0 2px 0;
       }
 
-      tr{
-        margin-bottom:14px;
-        border:1px solid #ccc;
-        border-radius:8px;
-        overflow:hidden;
+      .subtitle{
+        font-size:12px;
+        margin-bottom:5px;
       }
 
-      th{
+      .patient-box{
+        padding:6px 8px;
+        border-left:4px solid #4a7afe;
+        border-radius:5px;
+        margin-bottom:6px;
+        line-height:1.25;
+      }
+
+      .doctor-box{
+        padding:5px 8px;
+        border-left:4px solid #999;
+        border-radius:5px;
+        margin-bottom:6px;
+        line-height:1.2;
+      }
+
+      .doctor-contact{
         display:none;
       }
 
+      .info-box{
+        display:none;
+      }
+
+      h2{
+        font-size:13px;
+        margin:8px 0 4px 0;
+        padding-bottom:2px;
+        border-bottom:1px solid #4a7afe;
+      }
+
+      table{
+        margin-top:3px;
+        font-size:11px;
+        table-layout:fixed;
+      }
+
+      th{
+        padding:4px 3px;
+        font-size:10px;
+        line-height:1.1;
+      }
+
       td{
-        border:none;
-        border-bottom:1px solid #eee;
+        padding:4px 3px;
+        line-height:1.12;
       }
 
-      td:last-child{
-        border-bottom:none;
+      th:nth-child(1), td:nth-child(1){
+        width:52%;
       }
 
-      td::before{
-        content:attr(data-label);
-        display:block;
-        font-weight:bold;
-        color:#4a7afe;
+      th:nth-child(2), td:nth-child(2){
+        width:22%;
+      }
+
+      th:nth-child(3), td:nth-child(3){
+        width:26%;
+      }
+
+      .desc{
+        display:none;
+      }
+
+      .card{
         margin-bottom:4px;
+        padding:5px 7px;
+        border-left:4px solid #4a7afe;
+        border-radius:5px;
+        box-shadow:none;
       }
 
-      .center{
-        text-align:left;
+      .card-title{
+        font-size:11px;
+        margin-bottom:1px;
+      }
+
+      .usage{
+        margin-top:2px;
+        padding:3px 5px;
+        border-radius:4px;
+      }
+
+      .footer{
+        margin-top:6px;
+        padding-top:4px;
+        font-size:9px;
+        line-height:1.15;
+      }
+    }
+
+    @media print{
+      body{
+        background:#fff;
+        padding:0;
+      }
+
+      .container{
+        box-shadow:none;
+        border-radius:0;
+        padding:10mm;
+        max-width:none;
       }
     }
   </style>
@@ -210,12 +307,11 @@
   </div>
 
   <div class="doctor-box">
-    Ausgedruckt von:<br>
-    <strong>Dr. med. Sabahattin Yaman</strong><br>
-    Oststraße 80, 42551 Velbert<br>
+    Ausgedruckt von:<br class="doctor-contact">
+    <strong>Dr. med. Sabahattin Yaman</strong><br class="doctor-contact">
+    <span class="doctor-contact">Oststraße 80, 42551 Velbert<br>
     Tel: 02051-254604<br>
-    E-Mail: dr.s.yaman@t-online.de<br><br>
-
+    E-Mail: dr.s.yaman@t-online.de<br><br></span>
     Stand des Plans: ab 03.07.2026
   </div>
 
@@ -234,126 +330,100 @@
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Micardis 40/12,5 mg
         <div class="desc">→ Blutdruck / Entwässerung</div>
       </td>
-      <td data-label="Einnahme" class="center">1-0-0</td>
-      <td data-label="Hinweis">morgens</td>
+      <td class="center">1-0-0</td>
+      <td>morgens</td>
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Pantoprazol 20 mg
         <div class="desc">→ Magen</div>
       </td>
-      <td data-label="Einnahme" class="center">1-0-0</td>
-      <td data-label="Hinweis">morgens</td>
+      <td class="center">1-0-0</td>
+      <td>morgens</td>
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Jardiance 10 mg
         <div class="desc">→ Herz / Zucker / Nierenentlastung</div>
       </td>
-      <td data-label="Einnahme" class="center">1-0-0</td>
-      <td data-label="Hinweis">morgens</td>
+      <td class="center">1-0-0</td>
+      <td>morgens</td>
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Allopurinol 100 mg
         <div class="desc">→ Gegen Gicht / senkt Harnsäure</div>
       </td>
-      <td data-label="Einnahme" class="center">1-0-0</td>
-      <td data-label="Hinweis">morgens</td>
+      <td class="center">1-0-0</td>
+      <td>morgens</td>
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Isoptin (Verapamil) 40 mg
         <div class="desc">→ Herz / Blutdruck</div>
       </td>
-      <td data-label="Einnahme" class="center">1-0-1</td>
-      <td data-label="Hinweis">morgens und abends</td>
+      <td class="center">1-0-1</td>
+      <td>morgens + abends</td>
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Eliquis 5 mg
         <div class="desc">→ Blutverdünner</div>
       </td>
-      <td data-label="Einnahme" class="center">1-0-1</td>
-      <td data-label="Hinweis">morgens und abends</td>
+      <td class="center">1-0-1</td>
+      <td>morgens + abends</td>
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Atorvastatin 20 mg
         <div class="desc">→ Cholesterinsenker</div>
       </td>
-      <td data-label="Einnahme" class="center">0-0-1</td>
-      <td data-label="Hinweis">abends</td>
+      <td class="center">0-0-1</td>
+      <td>abends</td>
     </tr>
 
     <tr>
-      <td data-label="Medikament">
+      <td>
         Dekristol
         <div class="desc">→ Vitamin D3</div>
       </td>
-      <td data-label="Einnahme" class="center">1× wöchentlich</td>
-      <td data-label="Hinweis">einmal pro Woche</td>
+      <td class="center">1× wöchentlich</td>
+      <td>1× pro Woche</td>
     </tr>
   </table>
 
   <h2>Sprays / Inhalation / Tropfen</h2>
 
   <div class="card">
-    <div class="card-title">
-      Relvar Ellipta 92µg/22µg
-    </div>
-
-    <div class="desc">
-      → Inhalationspulver / Atemwege
-    </div>
-
-    <div class="usage">
-      Anwendung: <strong>1 Hub täglich</strong>
-    </div>
+    <div class="card-title">Relvar Ellipta 92µg/22µg</div>
+    <div class="desc">→ Inhalationspulver / Atemwege</div>
+    <div class="usage">Anwendung: <strong>1 Hub täglich</strong></div>
   </div>
 
   <div class="card">
-    <div class="card-title">
-      SalbuHEXAL® N Dosieraerosol 200
-    </div>
-
-    <div class="desc">
-      → Asthmaspray / Atemnot
-    </div>
-
-    <div class="usage">
-      Anwendung:
-      <span class="bedarf">Bei Bedarf – 2× täglich</span>
-    </div>
+    <div class="card-title">SalbuHEXAL® N Dosieraerosol 200</div>
+    <div class="desc">→ Asthmaspray / Atemnot</div>
+    <div class="usage">Anwendung: <span class="bedarf">Bei Bedarf – 2× täglich</span></div>
   </div>
 
   <div class="card">
-    <div class="card-title">
-      Novaminsulfon 500 mg Tropfen
-    </div>
-
-    <div class="desc">
-      → Schmerzmittel / fiebersenkend
-    </div>
-
-    <div class="usage">
-      Anwendung:
-      <span class="bedarf">Bei Bedarf</span>
-    </div>
+    <div class="card-title">Novaminsulfon 500 mg Tropfen</div>
+    <div class="desc">→ Schmerzmittel / fiebersenkend</div>
+    <div class="usage">Anwendung: <span class="bedarf">Bei Bedarf</span></div>
   </div>
 
   <div class="footer">
-    Bitte Änderungen an Herz-, Blutdruck- oder Blutverdünner-Medikamenten immer mit Arzt oder Apotheke abgleichen.
+    Änderungen an Herz-, Blutdruck- oder Blutverdünner-Medikamenten bitte mit Arzt oder Apotheke abgleichen.
   </div>
 
 </div>
